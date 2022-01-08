@@ -61,6 +61,7 @@ immi.head()
 |   2 | Immigrants | Foreigners |        Algeria |  903 |   Africa |  912 | Northern Africa | 902 | Developing regions |   80 | ... | 3616 | 3626 | 4807 | 3623 | 4005 | 5393 | 4752 | 4325 | 3774 | 4331 |
 |   3 | Immigrants | Foreigners | American Samoa |  909 |  Oceania |  957 |       Polynesia | 902 | Developing regions |    0 | ... |    0 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |
 |   4 | Immigrants | Foreigners |        Andorra |  908 |   Europe |  925 | Southern Europe | 901 |  Developed regions |    0 | ... |    0 |    0 |    1 |    1 |    0 |    0 |    0 |    0 |    1 |    1 |
+
 5 rows x 43 columns
 
 For this project, we're really only concerned with the country of origin and the yearly total immigration. To make later data processing easier, we'll drop the rest of the metadata columns (`["Type","Coverage","AREA","AreaName","REG","RegName","DEV","DevName"]`).
