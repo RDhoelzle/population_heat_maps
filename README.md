@@ -62,7 +62,7 @@ immi.head()
 | **3** | Immigrants | Foreigners | American Samoa |  909 |  Oceania |  957 |       Polynesia | 902 | Developing regions |    0 | ... |    0 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |
 | **4** | Immigrants | Foreigners |        Andorra |  908 |   Europe |  925 | Southern Europe | 901 |  Developed regions |    0 | ... |    0 |    0 |    1 |    1 |    0 |    0 |    0 |    0 |    1 |    1 |
 
-5 rows x 43 columns
+`5 rows x 43 columns`
 
 For this project, we're really only concerned with the country of origin and the yearly total immigration. To make later data processing easier, we'll drop the rest of the metadata columns (`["Type","Coverage","AREA","AreaName","REG","RegName","DEV","DevName"]`).
 
@@ -89,7 +89,7 @@ immi.head()
 | **3** | American Samoa |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    1 |    0 | ... |    0 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |
 | **4** |        Andorra |    0 |    0 |    0 |    0 |    0 |    0 |    2 |    0 |    0 | ... |    0 |    0 |    1 |    1 |    0 |    0 |    0 |    0 |    1 |    1 |
 
-5 rows x 35 columns
+`5 rows x 35 columns`
 
 Great! Now let's calculate the total immigration for each country into a final `"Total"` column, which will be the final value that we plot to the heat map.
 
@@ -108,7 +108,7 @@ immi.head()
 | **3** | American Samoa |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    1 |    0 | ... |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     6 |
 | **4** |        Andorra |    0 |    0 |    0 |    0 |    0 |    0 |    2 |    0 |    0 | ... |    0 |    1 |    1 |    0 |    0 |    0 |    0 |    1 |    1 |    15 |
 
-5 rows x 36 columns
+`5 rows x 36 columns`
 
 ## 3. Plot a heat map of the raw immigration data
 
@@ -158,6 +158,7 @@ folium.Choropleth(
 # display map
 tot_immi_map
 ```
+<img src="https://github.com/RDhoelzle/population_heat_maps/blob/main/Images/tot_immi_map.jpg?raw=true" width="700">
 
 4 of the 6 most immigrating countries also rank in the top 5 most populous (China, India, United States, and Pakistan). The Philippines and United Kingdom are outliers, though both are still highly populous countries.
 
@@ -188,7 +189,7 @@ population.head()
 | **3** |     4 | Estimates |                Less developed regions |     c |          902 | Development Group |        1803 | 1721612.105 | 1760030.715 | 1797141.517 | ... |  5801636.72 | 5881713.426 | 5962128.511 | 6042675.647 | 6123174.779 | 6203543.267 | 6283712.52 | 6363532.209 | 6442837.885 | 6521494.468 |
 | **4** |     5 | Estimates |             Least developed countries |     d |          941 | Development Group |         902 |  195427.785 |  199180.385 |  203015.198 | ... |  856471.437 |  876867.234 |  897793.439 |  919222.955 |  941131.317 |  963519.718 | 986385.402 | 1009691.252 | 1033388.868 | 1057438.163 |
 
-5 rows x 78 columns
+`5 rows x 78 columns`
 
 ```python
 #remove regions and subregions
@@ -217,7 +218,7 @@ population.head()
 | **29** |  Eritrea |  1733.423 |  1784.557 |  1836.825 |  1890.556 |  1946.299 |  2003.942 |  2064.803 |  2127.421 |  2185.607 | ... |  2719.809 | 2826.653 |  2918.209 |   2996.54 |  3062.782 |   3119.92 |  3170.437 |  3213.969 |  3250.104 |  3281.453 |
 | **30** | Ethiopia | 35141.703 | 35984.531 | 36995.246 | 38142.679 | 39374.346 | 40652.146 | 41965.696 | 43329.238 | 44757.205 | ... | 74239.508 | 76346.31 | 78489.205 | 80674.343 | 82916.236 | 85233.923 | 87639.962 | 90139.928 | 92726.982 | 95385.793 |
 
-5 rows x 35 columns
+`5 rows x 35 columns`
 
 Finally, we'll calculate the average population (in millions for easier scaling) for each country and plot the heat map.
 
@@ -237,7 +238,7 @@ population.head()
 | **29** |  Eritrea |  1733.423 |  1784.557 |  1836.825 |  1890.556 |  1946.299 |  2003.942 |  2064.803 |  2127.421 |  2185.607 | ... | 2826.653 |  2918.209 |   2996.54 |  3062.782 |   3119.92 |  3170.437 |  3213.969 |  3250.104 |  3281.453 |  2.423324 |
 | **30** | Ethiopia | 35141.703 | 35984.531 | 36995.246 | 38142.679 | 39374.346 | 40652.146 | 41965.696 | 43329.238 | 44757.205 | ... | 76346.31 | 78489.205 | 80674.343 | 82916.236 | 85233.923 | 87639.962 | 90139.928 | 92726.982 | 95385.793 | 61.293582 |
 
-5 rows x 35 columns
+`5 rows x 35 columns`
 
 ```python
 #create map object
@@ -266,6 +267,7 @@ folium.Choropleth(
 # display map
 pop_map
 ```
+<img src="https://github.com/RDhoelzle/population_heat_maps/blob/main/Images/pop_map.jpg?raw=true" width="700">
 
 ## 4. Normalise the immigration data by population and plot
 
@@ -323,7 +325,7 @@ immi.head()
 | **7** |   Argentina |  368 |  426 |  626 |  241 |  237 |  196 |  213 |  519 |  374 | ... |  847 |  620 |  540 |  467 |  459 |  278 |  263 |  282 | 19596 |  555.769560 |
 | **9** |   Australia |  702 |  639 |  484 |  317 |  317 |  319 |  356 |  467 |  410 | ... |  875 | 1033 | 1018 | 1018 |  933 |  851 |  982 | 1121 | 23829 | 1291.258590 |
 
-5 rows x 37 columns
+`5 rows x 37 columns`
 
 
 ```python
@@ -353,20 +355,21 @@ folium.Choropleth(
 # display map
 scaled_immi_map
 ```
+<img src="https://github.com/RDhoelzle/population_heat_maps/blob/main/Images/scaled_immi_map.jpg?raw=true" width="700">
 
 ## 5. Conclusions
 
 Our previous map highlighted the Commonwealth relationship between Canada and the United Kingdom, as well as the fact that populous countries tend to produce a large number of immigrants. This map tells a completely different story. The United Kingdom still stands out, as does the Philippines. However, we can now see that a number of Middle Eastern, European, North African, and Latin American countries generate a disproportionaly large number of immigrants. The reasons why fall under three main categories, and are far more interesting than raw population size or historical ties.
 
-##### Refugees
+#### Refugees
 
 The Middle East, North Africa, and Latin America have been wracked with instability for decades. Prolonged wars in Iran, Iraq, Afghanistan, Algeria, and Colombia have resulted in expansive immigrant populations around the globe, and Canada has long welcomed a <a href="https://www.macleans.ca/news/canada/refugee-resettlement-canada/" target="_blank">disproportionately high number of refugees</a>. People likewise fled the Chilean Military Dictatorship in the 1970s and 80s, as well as the Syrian Civil War starting in 2010.
 
-##### Poor Economic Opportunities
+#### Poor Economic Opportunities
 
 A primary reason that Canada is able to welcome so many refugees is its strong and stable economy. This also makes Canada an attractive destination for immigrants looking for economic opportunity. In Portugal, for instance, the expensive Colonial Wars of the 1960s and 1970s, followed by a series of revolutionary coups in the mid 1970s, resulted in a stagnant economy through the 1980s. Polish and Romanians also emmigrated for better economic opportunities following the fall of the Soviet Union in 1991.
 
-##### Overpopulation
+#### Overpopulation
 
 Overpopulation drove high immigration rates in the most of the remaining countries. A specific subset of poor economic opportunities, operpopulation occurs when a country's birth rate outpaces its ability to create both jobs and homes. This was the primary cause for immigration from the Philippines, Sri Lanka, Pakistan, and South Korea.
 
