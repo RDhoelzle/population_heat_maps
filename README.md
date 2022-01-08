@@ -293,15 +293,15 @@ scaled_immi_map
 
 Our previous map highlighted the Commonwealth relationship between Canada and the United Kingdom, as well as the fact that populous countries tend to produce a large number of immigrants. This map tells a completely different story. The United Kingdom still stands out, as does the Philippines. However, we can now see that a number of Middle Eastern, European, North African, and Latin American countries generate a disproportionaly large number of immigrants. The reasons why fall under three main categories, and are far more interesting than raw population size or historical ties.
 
-* Refugees
+##### Refugees
 
 The Middle East, North Africa, and Latin America have been wracked with instability for decades. Prolonged wars in Iran, Iraq, Afghanistan, Algeria, and Colombia have resulted in expansive immigrant populations around the globe, and Canada has long welcomed a <a href="https://www.macleans.ca/news/canada/refugee-resettlement-canada/" target="_blank">disproportionately high number of refugees</a>. People likewise fled the Chilean Military Dictatorship in the 1970s and 80s, as well as the Syrian Civil War starting in 2010.
 
-* Poor Economic Opportunities
+##### Poor Economic Opportunities
 
 A primary reason that Canada is able to welcome so many refugees is its strong and stable economy. This also makes Canada an attractive destination for immigrants looking for economic opportunity. In Portugal, for instance, the expensive Colonial Wars of the 1960s and 1970s, followed by a series of revolutionary coups in the mid 1970s, resulted in a stagnant economy through the 1980s. Polish and Romanians also emmigrated for better economic opportunities following the fall of the Soviet Union in 1991.
 
-* Overpopulation
+##### Overpopulation
 
 Overpopulation drove high immigration rates in the most of the remaining countries. A specific subset of poor economic opportunities, operpopulation occurs when a country's birth rate outpaces its ability to create both jobs and homes. This was the primary cause for immigration from the Philippines, Sri Lanka, Pakistan, and South Korea.
 
