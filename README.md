@@ -54,13 +54,13 @@ immi = pd.read_excel(
 immi.head()
 ```
 
-|     |       Type |   Coverage |         OdName | AREA | AreaName |  REG |         RegName | DEV |            DevName | 1980 | ... | 2004 | 2005 | 2006 | 2007 | 2008 | 2009 | 2010 | 2011 | 2012 | 2013 |
-| ---:| ----------:| ----------:| --------------:| ----:| --------:| ----:| ---------------:| ---:| ------------------:| ----:| ---:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:|
-|   0 | Immigrants | Foreigners |    Afghanistan |  935 |     Asia | 5501 |   Southern Asia | 902 | Developing regions |   16 | ... | 2978 | 3436 | 3009 | 2652 | 2111 | 1746 | 1758 | 2203 | 2635 | 2004 |
-|   1 | Immigrants | Foreigners |        Albania |  908 |   Europe |  925 | Southern Europe | 901 |  Developed regions |    1 | ... | 1450 | 1223 |  856 |  702 |  560 |  716 |  561 |  539 |  620 |  603 |
-|   2 | Immigrants | Foreigners |        Algeria |  903 |   Africa |  912 | Northern Africa | 902 | Developing regions |   80 | ... | 3616 | 3626 | 4807 | 3623 | 4005 | 5393 | 4752 | 4325 | 3774 | 4331 |
-|   3 | Immigrants | Foreigners | American Samoa |  909 |  Oceania |  957 |       Polynesia | 902 | Developing regions |    0 | ... |    0 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |
-|   4 | Immigrants | Foreigners |        Andorra |  908 |   Europe |  925 | Southern Europe | 901 |  Developed regions |    0 | ... |    0 |    0 |    1 |    1 |    0 |    0 |    0 |    0 |    1 |    1 |
+|       |       Type |   Coverage |         OdName | AREA | AreaName |  REG |         RegName | DEV |            DevName | 1980 | ... | 2004 | 2005 | 2006 | 2007 | 2008 | 2009 | 2010 | 2011 | 2012 | 2013 |
+| -----:| ----------:| ----------:| --------------:| ----:| --------:| ----:| ---------------:| ---:| ------------------:| ----:| ---:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:|
+| **0** | Immigrants | Foreigners |    Afghanistan |  935 |     Asia | 5501 |   Southern Asia | 902 | Developing regions |   16 | ... | 2978 | 3436 | 3009 | 2652 | 2111 | 1746 | 1758 | 2203 | 2635 | 2004 |
+| **1** | Immigrants | Foreigners |        Albania |  908 |   Europe |  925 | Southern Europe | 901 |  Developed regions |    1 | ... | 1450 | 1223 |  856 |  702 |  560 |  716 |  561 |  539 |  620 |  603 |
+| **2** | Immigrants | Foreigners |        Algeria |  903 |   Africa |  912 | Northern Africa | 902 | Developing regions |   80 | ... | 3616 | 3626 | 4807 | 3623 | 4005 | 5393 | 4752 | 4325 | 3774 | 4331 |
+| **3** | Immigrants | Foreigners | American Samoa |  909 |  Oceania |  957 |       Polynesia | 902 | Developing regions |    0 | ... |    0 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |
+| **4** | Immigrants | Foreigners |        Andorra |  908 |   Europe |  925 | Southern Europe | 901 |  Developed regions |    0 | ... |    0 |    0 |    1 |    1 |    0 |    0 |    0 |    0 |    1 |    1 |
 
 5 rows x 43 columns
 
@@ -81,6 +81,16 @@ for col in list(immi.columns.values):
 immi.head()
 ```
 
+|       |        Country | 1980 | 1981 | 1982 | 1983 | 1984 | 1985 | 1986 | 1987 | 1988 | ... | 2004 | 2005 | 2006 | 2007 | 2008 | 2009 | 2010 | 2011 | 2012 | 2013 |
+| -----:| --------------:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ---:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:|
+| **0** |    Afghanistan |   16 |   39 |   39 |   47 |   71 |  340 |  496 |  741 |  828 | ... | 2978 | 3436 | 3009 | 2652 | 2111 | 1746 | 1758 | 2203 | 2635 | 2004 |
+| **1** |        Albania |    1 |    0 |    0 |    0 |    0 |    0 |    1 |    2 |    2 | ... | 1450 | 1223 |  856 |  702 |  560 |  716 |  561 |  539 |  620 |  603 |
+| **2** |        Algeria |   80 |   67 |   71 |   69 |   63 |   44 |   69 |  132 |  242 | ... | 3616 | 3626 | 4807 | 3623 | 4005 | 5393 | 4752 | 4325 | 3774 | 4331 |
+| **3** | American Samoa |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    1 |    0 | ... |    0 |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |
+| **4** |        Andorra |    0 |    0 |    0 |    0 |    0 |    0 |    2 |    0 |    0 | ... |    0 |    0 |    1 |    1 |    0 |    0 |    0 |    0 |    1 |    1 |
+
+5 rows x 35 columns
+
 Great! Now let's calculate the total immigration for each country into a final `"Total"` column, which will be the final value that we plot to the heat map.
 
 ```python
@@ -89,6 +99,16 @@ immi["Total"] = immi.iloc[:, immi.columns != 'Country'].sum(axis=1)
 
 immi.head()
 ```
+
+|       |        Country | 1980 | 1981 | 1982 | 1983 | 1984 | 1985 | 1986 | 1987 | 1988 | ... | 2005 | 2006 | 2007 | 2008 | 2009 | 2010 | 2011 | 2012 | 2013 | Total |
+| -----:| --------------:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ---:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| -----:|
+| **0** |    Afghanistan |   16 |   39 |   39 |   47 |   71 |  340 |  496 |  741 |  828 | ... | 3436 | 3009 | 2652 | 2111 | 1746 | 1758 | 2203 | 2635 | 2004 | 58639 |
+| **1** |        Albania |    1 |    0 |    0 |    0 |    0 |    0 |    1 |    2 |    2 | ... | 1223 |  856 |  702 |  560 |  716 |  561 |  539 |  620 |  603 | 15699 |
+| **2** |        Algeria |   80 |   67 |   71 |   69 |   63 |   44 |   69 |  132 |  242 | ... | 3626 | 4807 | 3623 | 4005 | 5393 | 4752 | 4325 | 3774 | 4331 | 69439 |
+| **3** | American Samoa |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    1 |    0 | ... |    0 |    1 |    0 |    0 |    0 |    0 |    0 |    0 |    0 |     6 |
+| **4** |        Andorra |    0 |    0 |    0 |    0 |    0 |    0 |    2 |    0 |    0 | ... |    0 |    1 |    1 |    0 |    0 |    0 |    0 |    1 |    1 |    15 |
+
+5 rows x 36 columns
 
 ## 3. Plot a heat map of the raw immigration data
 
@@ -160,6 +180,16 @@ population = pd.read_excel(
 population.head()
 ```
 
+|       | Index |   Variant | Region, subregion, country or area \* | Notes | Country code |              Type | Parent code |        1950 |        1951 |        1952 | ... |        2011 |        2012 |        2013 |        2014 |        2015 |        2016 |       2017 |        2018 |        2019 |        2020 |
+| -----:| -----:| ---------:| -------------------------------------:| -----:| ------------:| -----------------:| -----------:| -----------:| -----------:| -----------:| ---:| -----------:| -----------:| -----------:| -----------:| -----------:| -----------:| ----------:| -----------:| -----------:| -----------:|
+| **0** |     1 | Estimates |                                 WORLD |   NaN |          900 |             World |           0 | 2536431.018 | 2584034.227 |  2630861.69 | ... | 7041194.168 | 7125827.957 | 7210582.041 | 7295290.759 | 7379796.967 | 7464021.934 |  7547858.9 | 7631091.113 | 7713468.205 | 7794798.729 |
+| **1** |     2 | Estimates |                 UN development groups |     a |         1803 |   Label/Separator |         900 |         ... |         ... |         ... | ... |         ... |         ... |         ... |         ... |         ... |         ... |        ... |         ... |         ... |         ... |
+| **2** |     3 | Estimates |                More developed regions |     b |          901 | Development Group |        1803 |  814818.913 |  824003.512 |  833720.173 | ... | 1239557.448 | 1244114.531 |  1248453.53 | 1252615.112 | 1256622.188 | 1260478.667 | 1264146.38 | 1267558.904 |  1270630.32 | 1273304.261 |
+| **3** |     4 | Estimates |                Less developed regions |     c |          902 | Development Group |        1803 | 1721612.105 | 1760030.715 | 1797141.517 | ... |  5801636.72 | 5881713.426 | 5962128.511 | 6042675.647 | 6123174.779 | 6203543.267 | 6283712.52 | 6363532.209 | 6442837.885 | 6521494.468 |
+| **4** |     5 | Estimates |             Least developed countries |     d |          941 | Development Group |         902 |  195427.785 |  199180.385 |  203015.198 | ... |  856471.437 |  876867.234 |  897793.439 |  919222.955 |  941131.317 |  963519.718 | 986385.402 | 1009691.252 | 1033388.868 | 1057438.163 |
+
+5 rows x 78 columns
+
 ```python
 #remove regions and subregions
 population = population[population['Country code'] < 900]
@@ -179,6 +209,16 @@ population.loc[(population.Country == "Czechia"), "Country"] = "Czech Republic"
 population.head()
 ```
 
+|        |  Country |      1980 |      1981 |      1982 |      1983 |      1984 |      1985 |      1986 |      1987 |      1988 | ... |      2004 |     2005 |      2006 |      2007 |      2008 |      2009 |      2010 |      2011 |      2012 |      2013 |
+| ------:| --------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---:| ---------:| --------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:|
+| **26** |  Burundi |  4157.296 |   4266.52 |  4379.727 |  4497.544 |  4621.096 |  4750.832 |  4886.745 |  5027.143 |  5168.703 | ... |  7131.688 | 7364.857 |   7607.85 |  7862.226 |  8126.104 |  8397.661 |  8675.606 |  8958.406 |  9245.992 |  9540.302 |
+| **27** |  Comoros |   307.831 |   317.617 |   326.944 |   336.088 |   345.455 |   355.337 |   365.765 |   376.647 |   387.964 | ... |    597.23 |  611.625 |   626.427 |   641.624 |   657.227 |   673.251 |   689.696 |   706.578 |   723.865 |   741.511 |
+| **28** | Djibouti |    358.96 |   374.934 |   385.268 |     393.8 |   406.018 |   425.608 |   454.359 |   490.337 |   528.993 | ... |   771.599 |  783.248 |   794.554 |   805.456 |   816.361 |    827.82 |   840.194 |   853.671 |   868.136 |   883.296 |
+| **29** |  Eritrea |  1733.423 |  1784.557 |  1836.825 |  1890.556 |  1946.299 |  2003.942 |  2064.803 |  2127.421 |  2185.607 | ... |  2719.809 | 2826.653 |  2918.209 |   2996.54 |  3062.782 |   3119.92 |  3170.437 |  3213.969 |  3250.104 |  3281.453 |
+| **30** | Ethiopia | 35141.703 | 35984.531 | 36995.246 | 38142.679 | 39374.346 | 40652.146 | 41965.696 | 43329.238 | 44757.205 | ... | 74239.508 | 76346.31 | 78489.205 | 80674.343 | 82916.236 | 85233.923 | 87639.962 | 90139.928 | 92726.982 | 95385.793 |
+
+5 rows x 35 columns
+
 Finally, we'll calculate the average population (in millions for easier scaling) for each country and plot the heat map.
 
 ```python
@@ -188,6 +228,16 @@ population["Average"] = population.iloc[:, population.columns != 'Country'].mean
 
 population.head()
 ```
+
+|        |  Country |      1980 |      1981 |      1982 |      1983 |      1984 |      1985 |      1986 |      1987 |      1988 | ... |     2005 |      2006 |      2007 |      2008 |      2009 |      2010 |      2011 |      2012 |      2013 |   Average |
+| ------:| --------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---:| --------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:| ---------:|
+| **26** |  Burundi |  4157.296 |   4266.52 |  4379.727 |  4497.544 |  4621.096 |  4750.832 |  4886.745 |  5027.143 |  5168.703 | ... | 7364.857 |   7607.85 |  7862.226 |  8126.104 |  8397.661 |  8675.606 |  8958.406 |  9245.992 |  9540.302 |  6.338221 |
+| **27** |  Comoros |   307.831 |   317.617 |   326.944 |   336.088 |   345.455 |   355.337 |   365.765 |   376.647 |   387.964 | ... |  611.625 |   626.427 |   641.624 |   657.227 |   673.251 |   689.696 |   706.578 |   723.865 |   741.511 |  0.503910 |
+| **28** | Djibouti |    358.96 |   374.934 |   385.268 |     393.8 |   406.018 |   425.608 |   454.359 |   490.337 |   528.993 | ... |  783.248 |   794.554 |   805.456 |   816.361 |    827.82 |   840.194 |   853.671 |   868.136 |   883.296 |  0.645651 |
+| **29** |  Eritrea |  1733.423 |  1784.557 |  1836.825 |  1890.556 |  1946.299 |  2003.942 |  2064.803 |  2127.421 |  2185.607 | ... | 2826.653 |  2918.209 |   2996.54 |  3062.782 |   3119.92 |  3170.437 |  3213.969 |  3250.104 |  3281.453 |  2.423324 |
+| **30** | Ethiopia | 35141.703 | 35984.531 | 36995.246 | 38142.679 | 39374.346 | 40652.146 | 41965.696 | 43329.238 | 44757.205 | ... | 76346.31 | 78489.205 | 80674.343 | 82916.236 | 85233.923 | 87639.962 | 90139.928 | 92726.982 | 95385.793 | 61.293582 |
+
+5 rows x 35 columns
 
 ```python
 #create map object
@@ -222,9 +272,8 @@ pop_map
 As you can see, the immigration and population heat maps are identical apart from a few outliers. The fact that the United Kingdom produces a similar number of Canadian immigrants to China and India is interesting, though not necessarily surprising when we consider that Canada is part of the British Commonwealth.
 
 Let's see how the story changes by normalising the immigration data. Here, we'll perform a type of *feature normalisation* by dividing the total immigration from each country by that country's average population (both from 1980 to 2013), generating an *immigration rate*, or immigration per population.
-<br>
-<br>
-<div style="text-align: center"> ${Immigration}_{rate} = \frac{{Immigration}_{total}} {{Population}_{average}} $ </div>
+
+*Immigration_rate* = *Immigration_total*/*Population_average*
 
 Demographic rates are often expressed per ten thousand, hundred thousand, or million people, depending on the data scale. We've already scaled our average populatin data to millions, which happens to result in a convenient scale for our final immigration rate, so we'll maintain that scale for this last step.
 
@@ -251,6 +300,11 @@ if list(immi.Country) == list(population.Country):
 else:
     print("The Country lists don't match")
 ```
+```
+Shape of Immigration data: (74, 36)
+Shape of Population data: (74, 36)
+The Country lists are identical
+```
 
 Now that our two datasets are identical, we'll calculate the immigration rate and add it as a new column in the immigration dataset and plot as before.
 
@@ -260,6 +314,17 @@ immi["Rate"] = np.divide(list(immi['Total']),list(population['Average']))
 
 immi.head()
 ```
+
+|       |     Country | 1980 | 1981 | 1982 | 1983 | 1984 | 1985 | 1986 | 1987 | 1988 | ... | 2006 | 2007 | 2008 | 2009 | 2010 | 2011 | 2012 | 2013 | Total |        Rate |
+| -----:| -----------:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ---:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| ----:| -----:| -----------:|
+| **0** | Afghanistan |   16 |   39 |   39 |   47 |   71 |  340 |  496 |  741 |  828 | ... | 3009 | 2652 | 2111 | 1746 | 1758 | 2203 | 2635 | 2004 | 58639 | 3004.084614 |
+| **2** |     Algeria |   80 |   67 |   71 |   69 |   63 |   44 |   69 |  132 |  242 | ... | 4807 | 3623 | 4005 | 5393 | 4752 | 4325 | 3774 | 4331 | 69439 | 2400.943139 |
+| **5** |      Angola |    1 |    3 |    6 |    6 |    4 |    3 |    5 |    5 |   11 | ... |  184 |  106 |   76 |   62 |   61 |   39 |   70 |   45 |  2113 |  136.260820 |
+| **7** |   Argentina |  368 |  426 |  626 |  241 |  237 |  196 |  213 |  519 |  374 | ... |  847 |  620 |  540 |  467 |  459 |  278 |  263 |  282 | 19596 |  555.769560 |
+| **9** |   Australia |  702 |  639 |  484 |  317 |  317 |  319 |  356 |  467 |  410 | ... |  875 | 1033 | 1018 | 1018 |  933 |  851 |  982 | 1121 | 23829 | 1291.258590 |
+
+5 rows x 37 columns
+
 
 ```python
 #create map object
