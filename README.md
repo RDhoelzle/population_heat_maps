@@ -1,6 +1,6 @@
 # Normalising Population Data for Geographical Heat Maps
 
-It's a well-known challenge when visualisating geographical data that if the data isn't handled properly, then geographical heatmaps tend to be no more than population maps.
+It's a well-known challenge when visualisating geographical data that if the data isn't handled properly, then geographical heat maps tend to be no more than population maps.
 
 <img src="https://imgs.xkcd.com/comics/heatmap_2x.png" width="500">
 <div style="text-align: center"> <a href="https://xkcd.com/1138/" target="_blank">XKCD Heat Maps</a> </div>
@@ -8,6 +8,8 @@ It's a well-known challenge when visualisating geographical data that if the dat
 This is due to simple sampling bias, ie: places with higher population density are more likely to have people with a given characteristic. As data scientists, we tell stories about data using visualisations, and population maps are seldom interesting or informative.
 
 This effect can be seen on a global scale when plotting immigration trends. The most populous countries (China, India, and the United States) tend to produce the greatest number immigrants, especially to developed countries. Let's explore this phenomenon in the context of immigration to Canada, then normalise the data by population to see how it changes the story.
+
+This workflow was created in Python 3.10, and the corresponding Jupyter Notebook can be found <a href="https://github.com/RDhoelzle/population_heat_maps/blob/main/Normalised%20Population%20Heat%20Maps.ipynb">here</a>.
 
 ## 1. Setup python environment
 
