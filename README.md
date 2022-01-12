@@ -375,4 +375,4 @@ A primary reason that Canada is able to welcome so many refugees is its strong a
 
 Overpopulation drove high immigration rates in the most of the remaining countries. A specific subset of poor economic opportunities, operpopulation occurs when a country's birth rate outpaces its ability to create both jobs and homes. This was the primary cause for immigration from the Philippines, Sri Lanka, Pakistan, and South Korea.
 
-Viewing Canadian immigraion data this way, we can see that Canada not only accepts a diverse range of immigrants from around the globe, but that its strong economy and commitment to liberal policies makes it an ideal country for immigrants to build a better life.
+Viewing Canadian immigration data this way, we can see that Canada not only accepts a diverse range of immigrants from around the globe, but that its strong economy and commitment to liberal policies makes it an ideal country for immigrants to build a better life.
