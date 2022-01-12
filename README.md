@@ -1,4 +1,4 @@
-# Normalising Population Data for Geographical Heat Maps
+# Normalizing Population Data for Geographical Heat Maps
 
 It's a well-known challenge when visualising geographical data that if the data isn't handled properly, then geographical heat maps tend to be no more than population maps.
 
