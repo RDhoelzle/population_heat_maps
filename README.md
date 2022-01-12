@@ -1,6 +1,6 @@
 # Normalising Population Data for Geographical Heat Maps
 
-It's a well-known challenge when visualisating geographical data that if the data isn't handled properly, then geographical heat maps tend to be no more than population maps.
+It's a well-known challenge when visualising geographical data that if the data isn't handled properly, then geographical heat maps tend to be no more than population maps.
 
 <img src="https://imgs.xkcd.com/comics/heatmap_2x.png" width="500">
 <div style="text-align: center"> <a href="https://xkcd.com/1138/" target="_blank">XKCD Heat Maps</a> </div>
@@ -13,7 +13,7 @@ This workflow was created in Python 3.10, and the corresponding Jupyter Notebook
 
 ## 1. Setup python environment
 
-First, we'll setup the python environment. The immigration and population data are in excel files, which I'm reading to dataframes using openpyxl (`!pip3 install openpyxl`). We'll visualise our data with `Folium`.
+First, we'll setup the python environment. The immigration and population data are in excel files, which I'm reading to dataframes using openpyxl (`!pip3 install openpyxl`). We'll visualize our data with `Folium`.
 
 ```python
 #import libraries
@@ -131,7 +131,7 @@ with open('Data/countries.geojson', encoding='utf-8') as file:
 
 To generate the heat map, we'll start by creating a `map` object centered at 25&deg;N, 5&deg;E (to make sure New Zealand is plotted). We'll also set the zoom to 2, which displays one full standard Mercator projection.
 
-We'll expand the number of bins in the colourscale to 7 by defining 8 evenly spaced bin edges from 0 to 1+ the maximum total immigration. We'll then call the `choropleth` method with the country names and total immigration by country from our cleaned data, as well as the geojson file.
+We'll expand the number of bins in the color scale to 7 by defining 8 evenly spaced bin edges from 0 to 1+ the maximum total immigration. We'll then call the `choropleth` method with the country names and total immigration by country from our cleaned data, as well as the geojson file.
 
 ```python
 #create map object
@@ -271,7 +271,7 @@ pop_map
 ```
 <img src="https://github.com/RDhoelzle/population_heat_maps/blob/main/Images/pop_map.jpg?raw=true" width="700">
 
-## 4. Normalise the immigration data by population and plot
+## 4. Normalize the immigration data by population and plot
 
 As you can see, the immigration and population heat maps are identical apart from a few outliers. The fact that the United Kingdom produces a similar number of Canadian immigrants to China and India is interesting, though not necessarily surprising when we consider that Canada is part of the British Commonwealth.
 
@@ -279,7 +279,7 @@ Let's see how the story changes by normalising the immigration data. Here, we'll
 
 *Immigration_rate* = *Immigration_total*/*Population_average*
 
-Demographic rates are often expressed per ten thousand, hundred thousand, or million people, depending on the data scale. We've already scaled our average populatin data to millions, which happens to result in a convenient scale for our final immigration rate, so we'll maintain that scale for this last step.
+Demographic rates are often expressed per ten thousand, hundred thousand, or million people, depending on the data scale. We've already scaled our average population data to millions, which happens to result in a convenient scale for our final immigration rate, so we'll maintain that scale for this last step.
 
 We'll need to do a little more data cleaning prepair the two datasets for normalisation. First, sampling bias can also occur when normalising data from small countries (<10M), so we'll remove those countries form our population data. Next, we'll make sure both datasets are in the same order by sorting by country name. Finally, we'll then subset the two datasets by the other's country list and verify that the lists are identical.
 
