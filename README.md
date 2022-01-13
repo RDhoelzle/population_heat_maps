@@ -273,7 +273,7 @@ pop_map
 
 ## 4. Normalize the immigration data by population and plot
 
-As you can see, the immigration and population heat maps are identical apart from a few outliers. The fact that the United Kingdom produces a similar number of Canadian immigrants to China and India is interesting, though not necessarily surprizing when we consider that Canada is part of the British Commonwealth.
+As you can see, the immigration and population heat maps are identical apart from a few outliers. The fact that the United Kingdom produces a similar number of Canadian immigrants to China and India is interesting, though not necessarily surprising when we consider that Canada is part of the British Commonwealth.
 
 Let's see how the story changes by normalizing the immigration data. Here, we'll perform a type of *feature normalization* by dividing the total immigration from each country by that country's average population (both from 1980 to 2013), generating an *immigration rate*, or immigration per population.
 
@@ -281,7 +281,7 @@ Let's see how the story changes by normalizing the immigration data. Here, we'll
 
 Demographic rates are often expressed per ten thousand, hundred thousand, or million people, depending on the data scale. We've already scaled our average population data to millions, which happens to result in a convenient scale for our final immigration rate, so we'll maintain that scale for this last step.
 
-We'll need to do a little more data cleaning prepair the two datasets for normalisation. First, sampling bias can also occur when normalizing data from small countries (<10M), so we'll remove those countries form our population data. Next, we'll make sure both datasets are in the same order by sorting by country name. Finally, we'll then subset the two datasets by the other's country list and verify that the lists are identical.
+We'll need to do a little more data cleaning to prepare the two datasets for normalization. First, sampling bias can also occur when normalizing data from small countries (<10M), so we'll remove those countries form our population data. Next, we'll make sure both datasets are in the same order by sorting by country name. Finally, we'll then subset the two datasets by the other's country list and verify that the lists are identical.
 
 ```python
 #remove low population countries
